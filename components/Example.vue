@@ -2,7 +2,12 @@
 <template>
   <div>
     <p>{{ response }}</p>
-    <button @click="share">Share นะจ๊ะ</button>
+    <div>
+      <button @click="share">Share นะจ๊ะ</button>
+    </div>
+    <div>
+      <button @click="copyClipboard">copy clipboard นะจ๊ะ</button>
+    </div>
   </div>
 </template>
 
@@ -30,6 +35,9 @@ export default Vue.extend({
         // fallback
         console.log('fallback')
       }
+    },
+    copyClipboard() {
+      navigator.clipboard.writeText('https://www.google.co.th')
     },
   },
 })

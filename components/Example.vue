@@ -34,6 +34,7 @@ export default Vue.extend({
       } else {
         // fallback
         console.log('fallback')
+        this.response = "not support on your device"
       }
     },
     copyClipboard() {
